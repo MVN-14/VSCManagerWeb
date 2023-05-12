@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="icon.ico" />
+    <script src="index.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
@@ -24,30 +25,59 @@
     ></script>
     <title>VSC Manager</title>
   </head>
+
   <body>
     <div class="p-5 container-fluid text-center">
-      <h1>Visual Studio Code Manager</h1>
-      <p>
-        Visual Studio Code Manager is an easy way to organize your Workspaces
-        and open them in in Code with a simple click!
-        <br />
-        Simply add and remove folders with VSC Manager to keep all your
-        important projects in one simple place
-      </p>
-      <img class="pt-5" src="./screenshot1.png" width="500" />
+      <h1 class="pb-5">Visual Studio Code Manager</h1>
+      <div class="row">
+        <p class="col-8 offset-2">
+          Visual Studio Code Manager is an easy way to organize your Workspaces
+          and open them in in Code with a simple click! Simply add and remove
+          folders with VSC Manager to keep all your important projects in one
+          simple place
+        </p>
+      </div>
       <div class="mt-5">
-        <a href="https://github.com/MVN-14/VSCManager" class="btn">
+        <a href="https://github.com/MVN-14/VSCManager" class="btn big-button">
           View on Github
+          <img class="p-0" src="github-logo.png" width="22px" />
         </a>
-        <a
-          id="btnDownload"
-          href="./VSCManagerSetup-x64.msi"
-          class="btn"
-          download
-        >
+        <a id="buttonOpenModal" class="btn big-button">
           Download
+          <img class="px-1 p-0" src="download.png" width="30px" />
         </a>
       </div>
+
+      <img class="pt-5" src="./screenshot1.png" width="600" alt="screenshot" />
+
+      <dialog class="p-0 text-center" id="dialogDownload">
+        <form class="p-0">
+          <h5 class="dialog-header">Download Installer</h5>
+          <div class="row m-0 dialog-body align-items-center">
+            <label class="col-5 text-end p-0">Select Installer:</label>
+            <div class="col">
+              <select class="form-select bg-dark" id="dialogSelect">
+                <option value="VSCManagerSetup-x64.msi" selected>
+                  VSCManagerSetup-x64.msi
+                </option>
+                <option value="VSCManagerSetup-x86.msi">
+                  VSCManagerSetup-x86.msi
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <a
+            class="btn mb-2"
+            id="dialogButtonDownload"
+            href="VSCManagerSetup-x64.msi"
+          >
+            Download
+            <img class="px-1 p-0" src="download.png" width="30px" />
+          </a>
+          <button class="btn close" formmethod="dialog">Cancel</button>
+        </form>
+      </dialog>
     </div>
   </body>
 </html>

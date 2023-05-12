@@ -4,10 +4,21 @@ body {
     font-family: consolas;
 }
 
-.btn {
-    background-color: #31a4f0;
+.big-button {
     padding: 15px 20px 15px 20px;
     margin: 0px 25px 0px 25px
+}
+
+.btn {
+    background-color: #31a4f0;
+}
+
+.btn:hover {
+    border: 1px solid #31a4f0;
+}
+
+a {
+    min-height: 40px;
 }
 
 h1 {
@@ -15,5 +26,39 @@ h1 {
 }
 
 p {
-    font-size: 24px;
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+dialog {
+    background-color: #252526;
+    border: 3px solid #31a4f0;
+}
+
+dialog .btn {
+    float: right;
+    margin-right: 5px;
+    min-height: 20px;
+}
+
+.dialog-body {
+    padding: 50px 50px 50px 50px;
+}
+
+.dialog-header {
+    padding: 5px;
+    margin: 0;
+    border-bottom: 3px solid #31a4f0;
+    color: #31a4f0;
+}
+
+.form-select, label {
+    color: #31a4f0;
+}
+
+.form-select {
+    font-size: 12px;
 }
