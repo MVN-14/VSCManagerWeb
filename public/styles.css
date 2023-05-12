@@ -1,0 +1,19 @@
+body {
+    background-color: #252526;
+    color: #31a4f0;
+    font-family: consolas;
+}
+
+.btn {
+    background-color: #31a4f0;
+    padding: 15px 20px 15px 20px;
+    margin: 0px 25px 0px 25px
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 24px;
+}
