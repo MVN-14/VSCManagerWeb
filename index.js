@@ -5,9 +5,9 @@ const app = express();
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("Server is running");
 });
 
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log("Server is running");
 });
